@@ -1,0 +1,42 @@
+{
+    "language": "C++",
+    "dependency_file": "CMakeLists.txt",
+    "dependencies": [],
+    "files": [
+        {
+            "path": "src/main.cpp",
+            "description": "Entry point and command-line argument parsing",
+            "exports": ["int main(int argc, char* argv[])"]
+        },
+        {
+            "path": "src/Analyzer.h",
+            "description": "Header file for the LunarImpactAnalyzer class",
+            "exports": ["class LunarImpactAnalyzer"]
+        },
+        {
+            "path": "src/Analyzer.cpp",
+            "description": "Implementation of the LunarImpactAnalyzer class",
+            "imports_from_other_files": ["Analyzer.h"]
+        },
+        {
+            "path": "src/DataProcessor.h",
+            "description": "Header file for data processing utilities",
+            "exports": ["class DataProcessor"]
+        },
+        {
+            "path": "src/DataProcessor.cpp",
+            "description": "Implementation of data processing utilities",
+            "imports_from_other_files": ["DataProcessor.h"]
+        },
+        {
+            "path": "src/Reporter.h",
+            "description": "Header file for report generation functionality",
+            "exports": ["class Reporter"]
+        },
+        {
+            "path": "src/Reporter.cpp",
+            "description": "Implementation of report generation logic",
+            "imports_from_other_files": ["Reporter.h"]
+        }
+    ]
+}
